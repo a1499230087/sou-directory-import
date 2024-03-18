@@ -1,20 +1,20 @@
 <!--suppress HtmlDeprecatedAttribute -->
 <div align="center">
   <p>
-    <img src="https://img.shields.io/node/v/directory-import?logo=nodedotjs&label=Node.JS version" alt="Node version required">
-    <img src="https://img.shields.io/github/package-json/v/KiiDii/directory-import?logo=vitess&logoColor=white&label=Package%20version" alt="Package version">
-    <img src="https://img.shields.io/github/languages/code-size/KiiDii/directory-import?logo=typescript&label=Builded code size" alt="GitHub code size">
-    <img src="https://img.shields.io/github/license/KiiDii/directory-import?logo=mdbook&label=License" alt="License">
-    <img src="https://img.shields.io/github/actions/workflow/status/KiiDii/directory-import/test.yml?logo=jest&label=Tests" alt="Github tests">
-    <img src="https://img.shields.io/github/issues/KiiDii/directory-import?logo=github&label=Issues">
-    <img src="https://img.shields.io/npm/dt/directory-import?logo=npm&label=Downloads" alt="Downloads">
+    <img src="https://img.shields.io/node/v/sou-directory-import?logo=nodedotjs&label=Node.JS version" alt="Node version required">
+    <img src="https://img.shields.io/github/package-json/v/KiiDii/sou-directory-import?logo=vitess&logoColor=white&label=Package%20version" alt="Package version">
+    <img src="https://img.shields.io/github/languages/code-size/KiiDii/sou-directory-import?logo=typescript&label=Builded code size" alt="GitHub code size">
+    <img src="https://img.shields.io/github/license/KiiDii/sou-directory-import?logo=mdbook&label=License" alt="License">
+    <img src="https://img.shields.io/github/actions/workflow/status/KiiDii/sou-directory-import/test.yml?logo=jest&label=Tests" alt="Github tests">
+    <img src="https://img.shields.io/github/issues/KiiDii/sou-directory-import?logo=github&label=Issues">
+    <img src="https://img.shields.io/npm/dt/sou-directory-import?logo=npm&label=Downloads" alt="Downloads">
     <a href="https://discord.gg/ADFYZtJ">
       <img src="https://img.shields.io/discord/219557939466338304?logo=discord&label=Discord%20chat" alt="Discord server">
     </a>
   </p>
   <p>
-    <a href="https://nodei.co/npm/directory-import">
-      <img src="https://nodei.co/npm/directory-import.png?compact=true" alt="Install directory-import from npm">
+    <a href="https://nodei.co/npm/sou-directory-import">
+      <img src="https://nodei.co/npm/sou-directory-import.png?compact=true" alt="Install sou-directory-import from npm">
     </a>
   </p>
 </div>
@@ -29,13 +29,13 @@ The imported modules can be used either from the returned object or in the callb
 ## Installation
 
 ```bash
-npm install directory-import
+npm install sou-directory-import
 ```
 
 After installation, you can use the module in your project:
 
 ```js
-const { directoryImport } = require('directory-import');
+const { directoryImport } = require('sou-directory-import');
 
 const importedModules = directoryImport('./path/to/directory');
 
@@ -47,7 +47,7 @@ console.log(importedModules);
 or:
 
 ```ts
-import { directoryImport } from 'directory-import';
+import { directoryImport } from 'sou-directory-import';
 
 const importedModules = directoryImport('./path/to/directory');
 
@@ -63,15 +63,15 @@ console.log(importedModules);
 Here's a simple example of how to use the library and how it works under the hood:
 
 ```javascript
-const { directoryImport } = require('directory-import');
+const { directoryImport } = require('sou-directory-import');
 
 const importedModules = directoryImport('./sample-directory');
 
 console.info(importedModules);
 ```
 
-<a href="https://github.com/KiiDii/directory-import/blob/master/media/directory-import-example.gif">
-  <img src="https://github.com/KiiDii/directory-import/blob/master/media/directory-import-example.gif?raw=true" alt="GIF demonstrating how it works">
+<a href="https://github.com/KiiDii/sou-directory-import/blob/master/media/sou-directory-import-example.gif">
+  <img src="https://github.com/KiiDii/sou-directory-import/blob/master/media/sou-directory-import-example.gif?raw=true" alt="GIF demonstrating how it works">
 </a>
 
 ### [Path to directory from the GIF above][pathToDirectoryFromGif]
@@ -81,15 +81,15 @@ console.info(importedModules);
 This can be handy when, for instance, you need to perform a specific action based on the imported file.
 
 ```javascript
-const { directoryImport } = require('directory-import');
+const { directoryImport } = require('sou-directory-import');
 
 directoryImport('./sample-directory', (moduleName, modulePath, moduleData) => {
   console.info({ moduleName, modulePath, moduleData });
 });
 ```
 
-<a href="https://github.com/KiiDii/directory-import/blob/master/media/directory-import-example-with-callback.gif">
-  <img src="https://github.com/KiiDii/directory-import/blob/master/media/directory-import-example-with-callback.gif?raw=true" alt="GIF demonstrating the callback feature">
+<a href="https://github.com/KiiDii/sou-directory-import/blob/master/media/sou-directory-import-example-with-callback.gif">
+  <img src="https://github.com/KiiDii/sou-directory-import/blob/master/media/sou-directory-import-example-with-callback.gif?raw=true" alt="GIF demonstrating the callback feature">
 </a>
 
 ### {Function} Callback properties:
@@ -120,7 +120,7 @@ directoryImport('./sample-directory', (moduleName, modulePath, moduleData) => {
 Minimum code needed for use:
 
 ```js
-const { directoryImport } = require('directory-import');
+const { directoryImport } = require('sou-directory-import');
 
 // Synchronously imports all modules in the same directory from which the code was called
 directoryImport();
@@ -129,7 +129,7 @@ directoryImport();
 Asynchronously import files from the specified directory:
 
 ```js
-const { directoryImport } = require('directory-import');
+const { directoryImport } = require('sou-directory-import');
 
 const result = directoryImport('./path/to/directory', 'async');
 
@@ -140,7 +140,7 @@ console.log(result);
 Put the result in a variable and invoke a callback on each file:
 
 ```js
-const { directoryImport } = require('directory-import');
+const { directoryImport } = require('sou-directory-import');
 
 const importedModules = directoryImport('./path/to/directory', (moduleName, modulePath, moduleData) => {
   // {
@@ -166,7 +166,7 @@ console.info(importedModules);
 ### Overloads:
 
 ```js
-const { directoryImport } = require('directory-import');
+const { directoryImport } = require('sou-directory-import');
 
 /**
  * Import modules from the current directory synchronously
@@ -182,7 +182,7 @@ console.log(importedModules);
 ```
 
 ```js
-const { directoryImport } = require('directory-import');
+const { directoryImport } = require('sou-directory-import');
 
 /**
  * Import modules from the current directory synchronously and call the provided callback for each imported module.
@@ -201,7 +201,7 @@ directoryImport((moduleName, modulePath, moduleData) => {
 ```
 
 ```js
-const { directoryImport } = require('directory-import');
+const { directoryImport } = require('sou-directory-import');
 
 /**
  * Import modules from the specified directory synchronously
@@ -218,7 +218,7 @@ console.log(importedModules);
 ```
 
 ```js
-const { directoryImport } = require('directory-import');
+const { directoryImport } = require('sou-directory-import');
 
 /**
  * Import modules from the specified directory synchronously and call the provided callback for each imported module.
@@ -238,7 +238,7 @@ directoryImport('./path/to/directory', (moduleName, modulePath, moduleData) => {
 ```
 
 ```js
-const { directoryImport } = require('directory-import');
+const { directoryImport } = require('sou-directory-import');
 
 /**
  * Import all modules from the specified directory synchronously or asynchronously.
@@ -256,7 +256,7 @@ console.log(importedModules);
 ```
 
 ```js
-const { directoryImport } = require('directory-import');
+const { directoryImport } = require('sou-directory-import');
 
 /**
  * Import all modules from the specified directory synchronously or asynchronously and call the provided callback for each imported module.
@@ -277,7 +277,7 @@ directoryImport('./path/to/directory', 'sync', (moduleName, modulePath, moduleDa
 ```
 
 ```js
-const { directoryImport } = require('directory-import');
+const { directoryImport } = require('sou-directory-import');
 
 const options = {
   includeSubdirectories: true,
@@ -302,7 +302,7 @@ console.log(importedModules);
 ```
 
 ```js
-const { directoryImport } = require('directory-import');
+const { directoryImport } = require('sou-directory-import');
 
 const options = {
   includeSubdirectories: true,
@@ -374,7 +374,7 @@ directoryImport(options, (moduleName, modulePath, moduleData) => {
 
 ## Contribution
 
-Contributions to `directory-import` are always welcome. Here is how you can contribute to the project:
+Contributions to `sou-directory-import` are always welcome. Here is how you can contribute to the project:
 
 1. **Report issues** - Report about a bug or suggest a new feature [here][gitIssues].
 
@@ -390,7 +390,7 @@ Before making a PR, please make sure your changes are consistent with the projec
 
 Please note that your contributions should follow the guidelines described in the [Code of Conduct][CODE_OF_CONDUCT].
 
-Thank you for your interest in contributing to the `directory-import`!
+Thank you for your interest in contributing to the `sou-directory-import`!
 
 [back to top](#top)
 
@@ -406,9 +406,9 @@ Thank you for your interest in contributing to the `directory-import`!
 
 [back to top](#top)
 
-[pathToDirectoryFromGif]: https://github.com/KiiDii/directory-import/tree/master/sample-directory
+[pathToDirectoryFromGif]: https://github.com/KiiDii/sou-directory-import/tree/master/sample-directory
 [discordServer]: https://discord.gg/ADFYZtJ
-[gitProject]: https://github.com/ANIname/directory-import
-[gitIssues]: https://github.com/ANIname/directory-import/issues
-[gitPullRequests]: https://github.com/ANIname/directory-import/pulls
-[CODE_OF_CONDUCT]: https://github.com/ANIname/directory-import/blob/master/CODE_OF_CONDUCT.md
+[gitProject]: https://github.com/ANIname/sou-directory-import
+[gitIssues]: https://github.com/ANIname/sou-directory-import/issues
+[gitPullRequests]: https://github.com/ANIname/sou-directory-import/pulls
+[CODE_OF_CONDUCT]: https://github.com/ANIname/sou-directory-import/blob/master/CODE_OF_CONDUCT.md

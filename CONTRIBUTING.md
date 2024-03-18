@@ -1,4 +1,4 @@
-# Contributing to [directory-import]
+# Contributing to [sou-directory-import]
 
 We love your input! We want to make contributing to this project as easy and transparent as possible, whether it's:
 
@@ -24,9 +24,9 @@ Pull requests are the best way to propose changes to the codebase. We actively w
 5. Make sure your code lints.
 6. Issue that pull request!
 
-## Report bugs using Github's [issues](https://github.com/ANIname/directory-import/issues)
+## Report bugs using Github's [issues](https://github.com/ANIname/sou-directory-import/issues)
 
-We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/ANIname/directory-import/issues/new); it's that easy!
+We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/ANIname/sou-directory-import/issues/new); it's that easy!
 
 ---
 
