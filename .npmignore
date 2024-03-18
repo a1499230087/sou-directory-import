@@ -1,0 +1,21 @@
+# Source code
+sample-directory/
+media/
+test/
+src/
+*.ts
+*.tsx
+
+# Configuration files
+.eslintrc
+.prettierrc
+.gitignore
+tsconfig.json
+
+# Editor files
+.vscode/
+.idea
+.DS_Store
+
+# Etc
+LICENSE
